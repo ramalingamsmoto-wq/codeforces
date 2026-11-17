@@ -12,31 +12,25 @@ si = lambda: input()                         # Single string
 ls = lambda: input().split()                 # List of strings
 
 
-a=li()
-counts=Counter(a)
 
-moves=0
-cs=counts[1]-counts[-1]
-#print(f"cs {cs}")
-if cs<0:
-    while cs<0:
-        
-        counts[-1]=counts[-1] - 1
-        counts[1]=counts[1]+ 1
-        
-        moves=moves+1
-        cs=counts[1]-counts[-1]
         
         
         
-        
-moc=counts[-1]
-cp=0
-if moc%2==0:
-    cp=1
-else:
-    counts[-1] =counts[-1] -1
-    counts[1]=counts[1]+1
-    moves=moves+1
+import math
+from itertools import pairwise
+
+list1=[]
+for i in range(3,900,1):
+    a=14
+    b=21
+    c = math.lcm(a, b)
+    list1.append(c)
     
-print(f"moves {moves}")
+    print(f"a {a} b {b} lcm {c}")
+    
+
+
+v1=is_strictly_increasing = all(a < b for a, b in pairwise(list1))
+print(f"v1 {v1}")
+
+
