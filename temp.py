@@ -13,9 +13,13 @@ ls = lambda: input().split()                 # List of strings
 
 
 
-for i in range(1,1000,1):
-    
-        
+from decimal import Decimal
+
+num = Decimal("-0")
+print(num.is_signed())  # True
+
+pos_num = Decimal("0")
+print(pos_num.is_signed())  # False
 
 
 
